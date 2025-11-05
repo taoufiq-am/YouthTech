@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ServicesMenu } from "../mocData/NavbarMenu.js";
+import { ServicesMenu } from "../mocData/ServicesMenu.js";
+
 import {
   FaFacebookF,
   FaInstagram,

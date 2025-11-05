@@ -6,7 +6,7 @@ export const Navbar = () => {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <nav className="bg-white shadow-lg fixed w-full top-0 left-0 z-50">
+    <nav className="bg-white shadow-lg fixed w-full top-0 left-0 z-50 mb-6">
       <div className="mx-auto flex justify-between items-center px-10 py-4">
 
         {/* Logo */}

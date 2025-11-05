@@ -1,4 +1,4 @@
-import { ServicesMenu } from "../mocData/data";
+import { ServicesMenu } from "../mocData/ServicesMenu";
 
 export const Card = () => {
   return (
