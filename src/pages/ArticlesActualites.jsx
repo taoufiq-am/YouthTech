@@ -1,10 +1,12 @@
 import React from 'react';
-
+import  ArticleImage1 from '../assets/images/ArticleImage1.jfif';
+import  ArticleImage2 from '../assets/images/ArticleImage2.jfif';
+import  ArticleImage3 from '../assets/images/ArticleImage3.jfif';
 export const ArticlesActualites = () => {
   const articles = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80",
+      image:ArticleImage1,
       date: "21",
       month: "Nov",
       author: "Yasmine",
@@ -16,7 +18,7 @@ export const ArticlesActualites = () => {
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80",
+      image: ArticleImage2,
       date: "21",
       month: "Nov",
       author: "Yasmine",
@@ -28,7 +30,7 @@ export const ArticlesActualites = () => {
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
+      image: ArticleImage3,
       date: "04",
       month: "Nov",
       author: "Yasmine",
@@ -41,7 +43,7 @@ export const ArticlesActualites = () => {
   ];
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-br from-blue-50 to-white">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-blue-50 rounded-full filter blur-3xl opacity-30 -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-50 rounded-full filter blur-3xl opacity-30 translate-x-1/2 translate-y-1/2"></div>

@@ -1,415 +1,8 @@
-// // // import { ChevronDownIcon } from "@heroicons/react/16/solid";
-// // import {Countries} from "../mocData/data.js";
-// // export const Contact = () => {
-// //   return (
-// //     <div className="relative isolate bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
-// //       {/* Background gradient shape */}
-// //       <div
-// //         aria-hidden="true"
-// //         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-// //       >
-// //         <div
-// //           style={{
-// //             clipPath:
-// //               "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-// //           }}
-// //           className="relative left-1/2 -z-10 aspect-[1155/678] w-[72.25rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-40rem)] sm:w-[144.375rem]"
-// //         />
-// //       </div>
-
-// //       {/* Heading */}
-// //       <div className="mx-auto max-w-2xl text-center">
-// //         <h2 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
-// //           Contact Us
-// //         </h2>
-// //         <p className="mt-2 text-lg text-gray-400">
-// //           Tell us about your needs and we'll get back to you as soon as
-// //           possible.
-// //         </p>
-// //       </div>
-
-// //       {/* Form */}
-// //       <form
-// //         action="#"
-// //         method="POST"
-// //         className="mx-auto mt-16 max-w-xl sm:mt-20"
-// //       >
-// //         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-// //           {/* First name */}
-// //           <div>
-// //             <label
-// //               htmlFor="first-name"
-// //               className="block text-sm font-semibold text-white"
-// //             >
-// //               First name
-// //             </label>
-// //             <div className="mt-2.5">
-// //               <input
-// //                 id="first-name"
-// //                 name="first-name"
-// //                 type="text"
-// //                 autoComplete="given-name"
-// //                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-white outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
-// //               />
-// //             </div>
-// //           </div>
-
-// //           {/* Last name */}
-// //           <div>
-// //             <label
-// //               htmlFor="last-name"
-// //               className="block text-sm font-semibold text-white"
-// //             >
-// //               Last name
-// //             </label>
-// //             <div className="mt-2.5">
-// //               <input
-// //                 id="last-name"
-// //                 name="last-name"
-// //                 type="text"
-// //                 autoComplete="family-name"
-// //                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-white outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
-// //               />
-// //             </div>
-// //           </div>
-
-// //           {/* Company */}
-// //           <div className="sm:col-span-2">
-// //             <label
-// //               htmlFor="company"
-// //               className="block text-sm font-semibold text-white"
-// //             >
-// //               Company
-// //             </label>
-// //             <div className="mt-2.5">
-// //               <input
-// //                 id="company"
-// //                 name="company"
-// //                 type="text"
-// //                 autoComplete="organization"
-// //                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-white outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
-// //               />
-// //             </div>
-// //           </div>
-
-// //           {/* Email */}
-// //           <div className="sm:col-span-2">
-// //             <label
-// //               htmlFor="email"
-// //               className="block text-sm font-semibold text-white"
-// //             >
-// //               Email
-// //             </label>
-// //             <div className="mt-2.5">
-// //               <input
-// //                 id="email"
-// //                 name="email"
-// //                 type="email"
-// //                 autoComplete="email"
-// //                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-white outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
-// //               />
-// //             </div>
-// //           </div>
-
-// //           {/* Phone number */}
-// //           <div className="sm:col-span-2">
-// //             <label
-// //               htmlFor="phone-number"
-// //               className="block text-sm font-semibold text-white"
-// //             >
-// //               Phone number
-// //             </label>
-// //             <div className="mt-2.5 flex rounded-md bg-white/5 outline outline-1 outline-white/10 focus-within:outline-2 focus-within:outline-indigo-500">
-// //               <div className="relative">
-// //                 <select
-// //                   id="country"
-// //                   name="country"
-// //                   className="appearance-none bg-transparent py-2 pl-3.5 pr-8 text-base text-gray-400 focus:outline-none"
-// //                 >
-// //                   {Countries.map((country) => (
-// //                     <option key={country.code} value={country.code}>
-// //                       {country.name} {country.code}
-// //                     </option>
-// //                   ))}
-// //                 </select>
-// //                 <div
-// //                   aria-hidden="true"
-// //                   className="absolute right-2 top-2.5 size-5 text-gray-400"
-// //                 ></div>
-// //               </div>
-// //               <input
-// //                 id="phone-number"
-// //                 name="phone-number"
-// //                 type="text"
-// //                 placeholder="123-456-7890"
-// //                 className="flex-1 bg-transparent py-2 pl-2 text-white placeholder:text-gray-500 focus:outline-none"
-// //               />
-// //             </div>
-// //           </div>
-
-// //           {/* Message */}
-// //           <div className="sm:col-span-2">
-// //             <label
-// //               htmlFor="message"
-// //               className="block text-sm font-semibold text-white"
-// //             >
-// //               Message
-// //             </label>
-// //             <div className="mt-2.5">
-// //               <textarea
-// //                 id="message"
-// //                 name="message"
-// //                 rows={4}
-// //                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-white outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
-// //               />
-// //             </div>
-// //           </div>
-
-// //           {/* Agree checkbox */}
-// //           <div className="flex items-center gap-x-3 sm:col-span-2">
-// //             <input
-// //               id="agree-to-policies"
-// //               name="agree-to-policies"
-// //               type="checkbox"
-// //               className="h-5 w-5 rounded border-gray-700 bg-white/5 text-indigo-500 focus:ring-indigo-500"
-// //             />
-// //             <label
-// //               htmlFor="agree-to-policies"
-// //               className="text-sm text-gray-400"
-// //             >
-// //               By selecting this, you agree to our{" "}
-// //               <a
-// //                 href="#"
-// //                 className="font-semibold text-indigo-400 hover:text-indigo-300"
-// //               >
-// //                 privacy policy
-// //               </a>
-// //               .
-// //             </label>
-// //           </div>
-// //         </div>
-
-// //         {/* Submit button */}
-// //         <div className="mt-10">
-// //           <button
-// //             type="submit"
-// //             className="block w-full rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow hover:bg-indigo-400 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-// //           >
-// //             Let’s talk
-// //           </button>
-// //         </div>
-// //       </form>
-// //     </div>
-// //   );
-// // }
-// import React from "react";
-// import { Countries } from "../mocData/data.js";
-
-// export const Contact = () => {
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     alert("Your message has been sent successfully!");
-//   };
-
-//   return (
-//     <div className="relative isolate bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
-//       {/* Background gradient shape */}
-//       <div
-//         aria-hidden="true"
-//         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-//       >
-//         <div
-//           style={{
-//             clipPath:
-//               "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-//           }}
-//           className="relative left-1/2 -z-10 aspect-[1155/678] w-[72.25rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-40rem)] sm:w-[144.375rem]"
-//         />
-//       </div>
-
-//       {/* Heading */}
-//       <div className="mx-auto max-w-2xl text-center">
-//         <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-//           Contact Us
-//         </h2>
-//         <p className="mt-2 text-lg text-gray-400">
-//           Tell us about your needs and we'll get back to you as soon as
-//           possible.
-//         </p>
-//       </div>
-
-//       {/* Form */}
-//       <form onSubmit={handleSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
-//         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-//           {/* First name */}
-//           <div>
-//             <label
-//               htmlFor="first-name"
-//               className="block text-sm font-semibold text-white"
-//             >
-//               First name
-//             </label>
-//             <div className="mt-2.5">
-//               <input
-//                 id="first-name"
-//                 name="first-name"
-//                 type="text"
-//                 placeholder="Enter your first name"
-//                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-white outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
-//               />
-//             </div>
-//           </div>
-
-//           {/* Last name */}
-//           <div>
-//             <label
-//               htmlFor="last-name"
-//               className="block text-sm font-semibold text-white"
-//             >
-//               Last name
-//             </label>
-//             <div className="mt-2.5">
-//               <input
-//                 id="last-name"
-//                 name="last-name"
-//                 type="text"
-//                 placeholder="Enter your last name"
-//                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-white outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
-//               />
-//             </div>
-//           </div>
-
-//           {/* Company */}
-//           <div className="sm:col-span-2">
-//             <label
-//               htmlFor="company"
-//               className="block text-sm font-semibold text-white"
-//             >
-//               Company
-//             </label>
-//             <div className="mt-2.5">
-//               <input
-//                 id="company"
-//                 name="company"
-//                 type="text"
-//                 placeholder="Your company (optional)"
-//                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-white outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
-//               />
-//             </div>
-//           </div>
-
-//           {/* Email */}
-//           <div className="sm:col-span-2">
-//             <label
-//               htmlFor="email"
-//               className="block text-sm font-semibold text-white"
-//             >
-//               Email
-//             </label>
-//             <div className="mt-2.5">
-//               <input
-//                 id="email"
-//                 name="email"
-//                 type="email"
-//                 placeholder="you@example.com"
-//                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-white outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
-//               />
-//             </div>
-//           </div>
-
-//           {/* Phone number */}
-//           <div className="sm:col-span-2">
-//             <label
-//               htmlFor="phone-number"
-//               className="block text-sm font-semibold text-white"
-//             >
-//               Phone number
-//             </label>
-//             <div className="mt-2.5 flex rounded-md bg-white/5 outline outline-1 outline-white/10 focus-within:outline-2 focus-within:outline-indigo-500">
-//               <div className="relative">
-//                 <select
-//                   id="country"
-//                   name="country"
-//                   className="appearance-none bg-transparent py-2 pl-3.5 pr-8 text-base text-gray-400 focus:outline-none"
-//                 >
-//                   {Countries.map((country) => (
-//                     <option key={country.code} value={country.code}>
-//                       {country.name} ({country.code})
-//                     </option>
-//                   ))}
-//                 </select>
-//               </div>
-//               <input
-//                 id="phone-number"
-//                 name="phone-number"
-//                 type="text"
-//                 placeholder="123-456-7890"
-//                 className="flex-1 bg-transparent py-2 pl-2 text-white placeholder:text-gray-500 focus:outline-none"
-//               />
-//             </div>
-//           </div>
-
-//           {/* Message */}
-//           <div className="sm:col-span-2">
-//             <label
-//               htmlFor="message"
-//               className="block text-sm font-semibold text-white"
-//             >
-//               Message
-//             </label>
-//             <div className="mt-2.5">
-//               <textarea
-//                 id="message"
-//                 name="message"
-//                 rows={4}
-//                 placeholder="Write your message here..."
-//                 className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-white outline outline-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:outline-indigo-500"
-//               />
-//             </div>
-//           </div>
-
-//           {/* Agree checkbox */}
-//           <div className="flex items-center gap-x-3 sm:col-span-2">
-//             <input
-//               id="agree-to-policies"
-//               name="agree-to-policies"
-//               type="checkbox"
-//               className="h-5 w-5 rounded border-gray-700 bg-white/5 text-indigo-500 focus:ring-indigo-500"
-//             />
-//             <label
-//               htmlFor="agree-to-policies"
-//               className="text-sm text-gray-400"
-//             >
-//               By selecting this, you agree to our{" "}
-//               <a
-//                 href="#"
-//                 className="font-semibold text-indigo-400 hover:text-indigo-300"
-//               >
-//                 privacy policy
-//               </a>
-//               .
-//             </label>
-//           </div>
-//         </div>
-
-//         {/* Submit button */}
-//         <div className="mt-10">
-//           <button
-//             type="submit"
-//             className="block w-full rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow hover:bg-indigo-400 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-//           >
-//             Let’s talk
-//           </button>
-//         </div>
-//       </form>
-//     </div>
-//   );
-// };
-// import React, { useState } from "react";
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { Mail, Phone, MessageSquare, User, Send, MapPin, Clock, CheckCircle, AlertCircle } from "lucide-react";
 
 export const Contact = () => {
   const [form, setForm] = useState({
@@ -437,18 +30,18 @@ export const Contact = () => {
       !form.message.trim() ||
       !form.phone.trim()
     ) {
-      setError("⚠️ All fields are required!");
+      setError("Tous les champs sont requis");
       return false;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(form.email)) {
-      setError("⚠️ Invalid email format.");
+      setError("Format d'email invalide");
       return false;
     }
 
     if (form.phone.length < 8) {
-      setError("⚠️ Please enter a valid phone number.");
+      setError("Veuillez entrer un numéro de téléphone valide");
       return false;
     }
 
@@ -476,103 +69,215 @@ export const Contact = () => {
       )
       .then(
         (result) => {
-          setSuccess("✅ Message sent successfully!");
+          setSuccess("Message envoyé avec succès!");
           setForm({ name: "", email: "", phone: "", message: "" });
           setLoading(false);
+          setTimeout(() => setSuccess(""), 5000);
         },
         (error) => {
-          setError("❌ Something went wrong.");
+          setError("Une erreur s'est produite. Veuillez réessayer.");
           setLoading(false);
         }
       );
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 px-5">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full"
-      >
-        <h2 className="text-3xl font-bold mb-6 text-center text-blue-600">
-          Contact Us
-        </h2>
+    <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-indigo-50 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{animationDelay: '2s'}}></div>
 
-        {error && <p className="text-red-600 mb-3">{error}</p>}
-        {success && <p className="text-green-600 mb-3">{success}</p>}
-
-        {/* Name */}
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-semibold mb-2">
-            Name
-          </label>
-          <input
-            type="text"
-            name="name"
-            value={form.name}
-            onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:border-blue-500"
-            placeholder="Enter your name"
-          />
+      <div className="max-w-7xl mx-auto px-6 lg:px-16 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-5 py-2 bg-blue-100 rounded-full mb-6 border border-blue-200">
+            <MessageSquare className="w-4 h-4 text-blue-600" />
+            <span className="text-blue-700 font-semibold text-sm tracking-wide">CONTACTEZ-NOUS</span>
+          </div>
+          <h2 className="text-5xl font-bold text-gray-900 mb-6">
+            Prêt à démarrer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">votre projet?</span>
+          </h2>
+          <p className="text-gray-600 text-xl max-w-2xl mx-auto">
+            Discutons de votre vision et transformons-la en réalité digitale
+          </p>
         </div>
 
-        {/* Email */}
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-semibold mb-2">
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:border-blue-500"
-            placeholder="Enter your email"
-          />
-        </div>
+        <div className="grid lg:grid-cols-3 gap-12 items-start">
+          {/* Contact Info Cards */}
+          <div className="lg:col-span-1 space-y-6">
+            {/* Card 1 */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
+              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4">
+                <Mail className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Email</h3>
+              <p className="text-gray-600 text-sm mb-3">Envoyez-nous un message</p>
+              <a href="mailto:contact@example.com" className="text-blue-600 font-semibold hover:text-blue-700">
+                contact@example.com
+              </a>
+            </div>
 
-        {/* Phone with country code */}
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-semibold mb-2">
-            Phone
-          </label>
-          <PhoneInput
-            country={"ma"} // Default: Morocco 🇲🇦
-            value={form.phone}
-            onChange={(phone) => setForm({ ...form, phone })}
-            inputStyle={{
-              width: "100%",
-              borderRadius: "8px",
-              padding: "12px",
-              border: "1px solid #d1d5db",
-            }}
-          />
-        </div>
+            {/* Card 2 */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-indigo-100">
+              <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+                <Phone className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Téléphone</h3>
+              <p className="text-gray-600 text-sm mb-3">Lun-Ven de 9h à 18h</p>
+              <a href="tel:+212600000000" className="text-indigo-600 font-semibold hover:text-indigo-700">
+                +212 6 00 00 00 00
+              </a>
+            </div>
 
-        {/* Message */}
-        <div className="mb-6">
-          <label className="block text-gray-700 text-sm font-semibold mb-2">
-            Message
-          </label>
-          <textarea
-            name="message"
-            value={form.message}
-            onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:border-blue-500 h-32"
-            placeholder="Write your message..."
-          ></textarea>
-        </div>
+            {/* Card 3 */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100">
+              <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4">
+                <MapPin className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Adresse</h3>
+              <p className="text-gray-600 text-sm mb-3">Visitez notre bureau</p>
+              <p className="text-purple-600 font-semibold">
+                Casablanca, Maroc
+              </p>
+            </div>
 
-        {/* Submit button */}
-        <button
-          type="submit"
-          disabled={loading}
-          className={`w-full ${
-            loading ? "bg-gray-400" : "bg-blue-600 hover:bg-blue-700"
-          } text-white py-3 rounded-lg transition-all duration-300 font-bold`}
-        >
-          {loading ? "Sending..." : "Send Message"}
-        </button>
-      </form>
-    </div>
+            {/* Response Time Badge */}
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-6 text-white">
+              <div className="flex items-center gap-3 mb-3">
+                <Clock className="w-6 h-6" />
+                <h3 className="text-lg font-bold">Réponse rapide</h3>
+              </div>
+              <p className="text-blue-100 text-sm">
+                Nous répondons généralement dans les 24 heures ouvrables
+              </p>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="lg:col-span-2">
+            <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 border border-gray-100">
+              {/* Alert Messages */}
+              {error && (
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start gap-3">
+                  <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-red-700 text-sm font-medium">{error}</p>
+                </div>
+              )}
+              {success && (
+                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-green-700 text-sm font-medium">{success}</p>
+                </div>
+              )}
+
+              <div className="grid md:grid-cols-2 gap-6 mb-6 h-100">
+                {/* Name */}
+                <div>
+                  <label className="flex items-center gap-2 text-gray-700 text-sm font-semibold mb-3">
+                    <User className="w-4 h-4 text-blue-600" />
+                    Nom complet
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    className="w-full border-2 border-gray-200 rounded-xl p-4 focus:outline-none focus:border-blue-500 transition-colors duration-300"
+                    placeholder="Jean Dupont"
+                  />
+                </div>
+
+                {/* Email */}
+                <div>
+                  <label className="flex items-center gap-2 text-gray-700 text-sm font-semibold mb-3">
+                    <Mail className="w-4 h-4 text-blue-600" />
+                    Adresse email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    className="w-full border-2 border-gray-200 rounded-xl p-4 focus:outline-none focus:border-blue-500 transition-colors duration-300"
+                    placeholder="jean@exemple.com"
+                  />
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="mb-6">
+                <label className="flex items-center gap-2 text-gray-700 text-sm font-semibold mb-3">
+                  <Phone className="w-4 h-4 text-blue-600" />
+                  Numéro de téléphone
+                </label>
+                <PhoneInput
+                  country={"ma"}
+                  value={form.phone}
+                  onChange={(phone) => setForm({ ...form, phone })}
+                  inputStyle={{
+                    width: "100%",
+                    borderRadius: "12px",
+                    padding: "16px 16px 16px 52px",
+                    border: "2px solid #e5e7eb",
+                    fontSize: "16px",
+                    fontFamily: "inherit"
+                  }}
+                  buttonStyle={{
+                    borderRadius: "12px 0 0 12px",
+                    border: "2px solid #e5e7eb",
+                    borderRight: "none"
+                  }}
+                  containerStyle={{
+                    borderRadius: "12px"
+                  }}
+                />
+              </div>
+
+              {/* Message */}
+              <div className="mb-8">
+                <label className="flex items-center gap-2 text-gray-700 text-sm font-semibold mb-3">
+                  <MessageSquare className="w-4 h-4 text-blue-600" />
+                  Votre message
+                </label>
+                <textarea
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  className="w-full border-2 border-gray-200 rounded-xl p-4 focus:outline-none focus:border-blue-500 transition-colors duration-300 h-40 resize-none"
+                  placeholder="Décrivez votre projet..."
+                ></textarea>
+              </div>
+
+              {/* Submit button */}
+              <button
+                onClick={handleSubmit}
+                disabled={loading}
+                className={`w-full ${
+                  loading
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                } text-white py-5 rounded-xl transition-all duration-300 font-bold text-lg shadow-lg shadow-blue-500/30 flex items-center justify-center gap-3 group`}
+              >
+                {loading ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    Envoi en cours...
+                  </>
+                ) : (
+                  <>
+                    Envoyer le message
+                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </>
+                )}
+              </button>
+
+              <p className="text-center text-gray-500 text-sm mt-6">
+                Vos informations sont sécurisées et ne seront jamais partagées
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };

@@ -13,7 +13,7 @@ import {
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#1a1a1a] text-gray-300">
+    <footer className=" bg-gray-900 text-white">
       <div className="w-full mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* ---  Services --- */}
         <div>
@@ -127,7 +127,7 @@ export const Footer = () => {
       </div>
 
       {/* --- Bottom bar --- */}
-      <div className="bg-[#111] border-t border-gray-800 py-5 text-center text-gray-500 text-sm">
+      <div className="bg-gray-900 border-t border-gray-800 py-5 text-center text-gray-500 text-sm">
         © {new Date().getFullYear()}{" "}
         <span className="text-blue-500 font-medium">YouthTech</span>. All Rights
         Reserved.
