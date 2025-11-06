@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { NavbarMenu } from "../mocData/NavbarMenu.js";
 import { ServicesMenu } from "../mocData/ServicesMenu.js";
+import logo from "../assets/images/logo.jpg";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false); // mobile menu
@@ -37,7 +38,7 @@ export const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
           <img
-            src="/logo.png"
+            src={logo}
             alt="YouthTech Logo"
             className="w-10 h-10 object-contain"
           />
