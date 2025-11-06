@@ -8,6 +8,8 @@ import logo from "../assets/images/logo.jpg";
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [opene, setOpene] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
