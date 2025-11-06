@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { NavbarMenu } from "../mocData/NavbarMenu.js";
+import logo from "../assets/images/logo.jpg"; 
+
 
 export const Navbar = () => {
   const [open, setOpen] = React.useState(false);
@@ -11,7 +13,7 @@ export const Navbar = () => {
 
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="YouthTech Logo" className="w-10 h-11" />
+          <img src={logo} alt="YouthTech Logo" className="w-10 h-11" />
           <h1 className="text-3xl font-extrabold uppercase mr-6 tracking-wide">
             <span className="text-gray-900">Youth</span>
             <span className="text-blue-600">Tech</span>
