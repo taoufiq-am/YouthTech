@@ -13,7 +13,7 @@ import {
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#1a1a1a] text-gray-300">
+    <footer className="bg-[#1a1a1a] mt-20 text-gray-300">
       <div className="w-full mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* ---  Services --- */}
         <div>
