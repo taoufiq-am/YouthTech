@@ -21,8 +21,9 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar.jsx";
 import { Card } from "./components/Card.jsx";
-import { Contact } from "./components/Contact.jsx";
-import { Hero } from "./components/Hero.jsx"; // make sure this exists
+import { Contact } from "./pages/Contact.jsx";
+import { Hero } from "./pages/Hero.jsx";
+import { AvitoHome } from "./pages/AvitoHome.jsx";
 import { Footer } from "./components/Footer.jsx";
 
 function App() {
@@ -30,7 +31,8 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Hero />} />
+        <Route path="/" element={<AvitoHome />} />
+        <Route path="/hero" element={<Hero />} />
         <Route path="/card" element={<Card />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
