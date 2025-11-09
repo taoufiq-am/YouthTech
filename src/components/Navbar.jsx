@@ -92,7 +92,7 @@ export const Navbar = () => {
                       ))}
                       <div className="border-t border-gray-100 mt-2 pt-2 px-4">
                         <Link
-                          to="/service"
+                          to="/services"
                           className="block text-blue-600 font-semibold hover:text-blue-700 py-2"
                           onClick={() => setServicesOpen(false)}
                         >
