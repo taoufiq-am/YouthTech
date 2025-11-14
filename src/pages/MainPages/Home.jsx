@@ -9,7 +9,7 @@ import ArticlesActualites from "../ArticlesActualites.jsx";
 
 export const Home= () => {
     return (
-        <div>
+        <div className="select-none">
             <Hero />
             <SolutionsGestion/>
             <DecourvezServices/>

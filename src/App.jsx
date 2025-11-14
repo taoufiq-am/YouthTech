@@ -10,9 +10,9 @@ import { WebDevelopmentPage } from "./pages/MainPages/WebDevelopmentPage.jsx";
 import { UIUXDesignPage } from "./pages/MainPages/UiUxDesignPage.jsx";
 import { SEOOptimizationPage } from "./pages/MainPages/SEOOptimizationPage.jsx";
 import { MobileAppPage } from "./pages/MainPages/MobileAppPage.jsx";
-import { EcommercePage } from "./pages/MainPages/EcommercePage.jsx"
+import { EcommercePage } from "./pages/MainPages/EcommercePage.jsx";
 import { DigitalMarketingPage } from "./pages/MainPages/DigitalMarketingPage.jsx";
-import {ServicesPage} from "./pages/MainPages/ServicesPage.jsx";
+import { ServicesPage } from "./pages/MainPages/ServicesPage.jsx";
 
 function App() {
   return (
