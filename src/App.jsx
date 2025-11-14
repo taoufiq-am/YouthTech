@@ -29,7 +29,7 @@ function App() {
         <Route path="/mobile-app-development" element={<MobileAppPage />} />
         <Route path="/ecommerce-solutions" element={<EcommercePage />} />
         <Route path="/digitale-marketing" element={<DigitalMarketingPage />} />
-        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/service" element={<ServicesPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

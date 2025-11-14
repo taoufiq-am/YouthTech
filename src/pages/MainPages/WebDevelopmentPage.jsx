@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { 
   Code, 
   ArrowRight,
@@ -160,17 +161,19 @@ export const WebDevelopmentPage = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 justify-center">
-              <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-xl shadow-xl shadow-blue-500/30 transition-all duration-300 flex items-center gap-2">
-                Démarrer votre projet
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="px-8 py-4 bg-white/80 backdrop-blur-sm hover:bg-white text-gray-800 font-semibold rounded-xl shadow-lg border border-gray-200 transition-all duration-300 hover:border-blue-300">
+              <Link to="/contact" >
+                <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-xl shadow-xl shadow-blue-500/30 transition-all duration-300 flex items-center gap-2">
+                  Démarrer votre projet
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
+              {/* <button className="px-8 py-4 bg-white/80 backdrop-blur-sm hover:bg-white text-gray-800 font-semibold rounded-xl shadow-lg border border-gray-200 transition-all duration-300 hover:border-blue-300">
                 Voir nos réalisations
-              </button>
+              </button> */}
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 mt-16 max-w-3xl mx-auto">
+            {/* <div className="grid grid-cols-3 gap-8 mt-16 max-w-3xl mx-auto">
               <div className="text-center">
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 mb-2">500+</div>
                 <div className="text-gray-600">Projets réalisés</div>
@@ -183,7 +186,7 @@ export const WebDevelopmentPage = () => {
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 mb-2">5+</div>
                 <div className="text-gray-600">Années d'expérience</div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -356,13 +359,17 @@ export const WebDevelopmentPage = () => {
           </p>
           
           <div className="flex flex-wrap gap-4 justify-center">
-            <button className="group px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 hover:scale-105">
-              Demander un devis gratuit
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300">
-              Planifier un appel
-            </button>
+            <Link to="/contact">
+              <button className="group px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 hover:scale-105">
+                Demander un devis gratuit
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </Link>
+            <Link to="/contact"></Link>
+              <button className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300">
+                Planifier un appel
+              </button>
+            <Link/>
           </div>
         </div>
       </section>

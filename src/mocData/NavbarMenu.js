@@ -1,32 +1,30 @@
 {
-  /* Navebar Menu */
+  /* Navbar Menu */
 }
 export const NavbarMenu = [
   {
     id: 1,
-    title: "Home",
+    title: "Accueil",
     link: "/",
   },
   {
     id: 2,
-    title: "About Us",
+    title: "À propos",
     link: "/about",
   },
   {
     id: 3,
     title: "Services",
-    link: "/services",
+    link: "/service",
   },
-  {
-    id: 4,
-    title: "Contact Us",
-    link: "/contact",
-  },
-  {
-    id: 5,
-    title: "Blog",
-    link: "/blog",
-  },
+  // {
+  //   id: 4,
+  //   title: "Contactez-nous",
+  //   link: "/contact",
+  // },
+  // {
+  //   id: 5,
+  //   title: "Blog",
+  //   link: "/blog",
+  // },
 ];
-
-

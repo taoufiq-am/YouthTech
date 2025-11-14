@@ -1,49 +1,73 @@
 // Service Menu Data
+import {
+  ArrowRight,
+  Sparkles,
+  CheckCircle2,
+  Globe,
+  Palette,
+  TrendingUp,
+  Search,
+  Smartphone,
+  ShoppingCart,
+  Zap,
+  Award,
+  Users,
+} from "lucide-react";
+
+// Service Menu Data
 export const ServicesMenu = [
   {
     id: 1,
-    img: "/web.svg",
-    title: "Web Development",
+    img: Globe,
+    title: "Développement Web",
     description:
-      "Build responsive and dynamic websites tailored to your needs.",
+      "Créez des sites web responsives et dynamiques adaptés à vos besoins.",
     link: "/web-developpement",
+    color: "from-blue-500 to-indigo-600",
   },
   {
     id: 2,
-    img: "/design.svg",
-    title: "UI/UX Design",
-    description: "Design intuitive interfaces that enhance user experience.",
+    img: Palette,
+    title: "Design UI/UX",
+    description:
+      "Concevez des interfaces intuitives qui améliorent l'expérience utilisateur.",
     link: "/ui-ux",
+    color: "from-purple-500 to-pink-600",
   },
   {
     id: 3,
-    img: "/media.svg",
-    title: "Digital Marketing",
+    img: TrendingUp,
+    title: "Marketing Digital",
     description:
-      "Boost your online presence through social media and campaigns.",
+      "Boostez votre présence en ligne grâce aux réseaux sociaux et aux campagnes.",
     link: "/digitale-marketing",
+    color: "from-orange-500 to-red-600",
   },
   {
     id: 4,
-    img: "/eco.svg",
-    title: "SEO Optimization",
+    img: Search,
+    title: "Optimisation SEO",
     description:
-      "Improve your website's ranking on search engines effectively.",
+      "Améliorez efficacement le classement de votre site web sur les moteurs de recherche.",
     link: "/seo-optimization",
+    color: "from-green-500 to-emerald-600",
   },
   {
     id: 5,
-    img: "/app.svg",
-    title: "Mobile App Development",
+    img: Smartphone,
+    title: "Développement d’Applications Mobiles",
     description:
-      "Develop feature-rich mobile applications for iOS and Android.",
+      "Développez des applications mobiles riches en fonctionnalités pour iOS et Android.",
     link: "/mobile-app-development",
+    color: "from-cyan-500 to-blue-600",
   },
   {
     id: 6,
-    img: "/ecommerce.svg",
-    title: "E-commerce Solutions",
-    description: "Build online stores that convert visitors into customers.",
+    img: ShoppingCart,
+    title: "Solutions E-commerce",
+    description:
+      "Créez des boutiques en ligne qui convertissent les visiteurs en clients.",
     link: "/ecommerce-solutions",
+    color: "from-indigo-500 to-purple-600",
   },
 ];

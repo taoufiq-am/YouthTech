@@ -18,22 +18,21 @@ export const Footer = () => {
         {/* ---  Services --- */}
         <div>
           <h2 className="text-white font-semibold text-lg mb-5 uppercase">
-            Our Services
+            Nos services
           </h2>
           <ul className="space-y-2 text-gray-400 text-sm">
             {ServicesMenu.map((item) => (
-            <li key={item.id}>
-              <Link to={item.link} className="hover:text-blue-500">
-                • {item.title}
-              </Link>
-            </li>
+              <li key={item.id}>
+                <Link to={item.link} className="hover:text-blue-500">
+                  • {item.title}
+                </Link>
+              </li>
             ))}
-            
           </ul>
         </div>
 
         {/* --- Column 2: Newsletter --- */}
-        <div>
+        {/* <div>
           <h2 className="text-white font-semibold text-lg mb-5 uppercase">
             Newsletter
           </h2>
@@ -54,17 +53,17 @@ export const Footer = () => {
               SUBSCRIBE
             </button>
           </form>
-        </div>
+        </div> */}
 
         {/* --- Column 3: Visit Us --- */}
         <div>
           <h2 className="text-white font-semibold text-lg mb-5 uppercase">
-            Visit Us Today!
+            Venez nous rendre visite dès aujourd’hui!
           </h2>
           <ul className="space-y-3 text-gray-400 text-sm">
             <li className="flex items-start gap-3">
               <FaMapMarkerAlt className="text-blue-500 mt-1" />
-              <span>Casablanca, Morocco</span>
+              <span>Agadir, Morocco</span>
             </li>
             <li className="flex items-center gap-3">
               <FaPhoneAlt className="text-blue-500" />
@@ -72,7 +71,9 @@ export const Footer = () => {
             </li>
             <li className="flex items-center gap-3">
               <FaEnvelope className="text-blue-500" />
-              <span>contact@youthtech.com</span>
+              <a href="mailto:youthtech.contact@gmail.com">
+                youthtech.contact@gmail.com
+              </a>
             </li>
           </ul>
         </div>
@@ -80,12 +81,13 @@ export const Footer = () => {
         {/* ---   About --- */}
         <div>
           <h2 className="text-white font-semibold text-lg mb-5 uppercase">
-            About YouthTech
+            À propos de YouthTech
           </h2>
           <p className="text-gray-400 text-sm mb-5">
-            YouthTech is a creative web agency specialized in designing and
-            developing custom websites, e-commerce platforms, and digital
-            marketing strategies to help your business grow online.
+            YouthTech est une agence web créative spécialisée dans la conception
+            et le développement de sites web sur mesure, de plateformes
+            e-commerce et de stratégies de marketing digital pour aider votre
+            entreprise à se développer en ligne.
           </p>
 
           {/* Contact icons beside socials */}
@@ -94,11 +96,12 @@ export const Footer = () => {
               <FaPhoneAlt className="text-blue-500" /> +212 693 953 838
             </div>
             <div className="flex items-center gap-3">
-              <FaEnvelope className="text-blue-500" /> contact@youthtech.com
+              <FaEnvelope className="text-blue-500" />{" "}
+              youthtech.contact@gmail.com
             </div>
             <div className="flex items-start gap-3">
               <FaMapMarkerAlt className="text-blue-500 mt-1" />
-              Casablanca, Morocco
+              Agadir, Morocco
             </div>
           </div>
 
@@ -129,8 +132,8 @@ export const Footer = () => {
       {/* --- Bottom bar --- */}
       <div className="bg-gray-900 border-t border-gray-800 py-5 text-center text-gray-500 text-sm">
         © {new Date().getFullYear()}{" "}
-        <span className="text-blue-500 font-medium">YouthTech</span>. All Rights
-        Reserved.
+        <span className="text-blue-500 font-medium">YouthTech</span>. Tous
+        droits réservés Reserved.
       </div>
     </footer>
   );

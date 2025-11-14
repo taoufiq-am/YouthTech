@@ -81,18 +81,18 @@ export const Navbar = () => {
                   {servicesOpen && (
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-56 bg-white rounded shadow-lg border border-gray-100 py-2 text-center">
                       {ServicesMenu.map((service) => (
-                        <a
+                        <Link
                           key={service.id}
-                          href={service.link}
+                          to={service.link}
                           className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
                           onClick={() => setServicesOpen(false)}
                         >
                           {service.title}
-                        </a>
+                        </Link>
                       ))}
                       <div className="border-t border-gray-100 mt-2 pt-2 px-4">
                         <Link
-                          to="/services"
+                          to="/service"
                           className="block text-blue-600 font-semibold hover:text-blue-700 py-2"
                           onClick={() => setServicesOpen(false)}
                         >

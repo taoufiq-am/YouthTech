@@ -34,12 +34,12 @@ export const Contact = () => {
       !form.subject.trim() ||
       !form.message.trim()
     ) {
-      setError("All fields are required");
+      setError("Tous les champs sont requis");
       return false;
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(form.email)) {
-      setError("Please enter a valid email address");
+      setError("Veuillez entrer une adresse e-mail valide");
       return false;
     }
     return true;
@@ -64,7 +64,7 @@ export const Contact = () => {
       from_email: form.email,
       subject: form.subject,
       message: form.message,
-      date: new Date().toLocaleDateString("en-US", {
+      date: new Date().toLocaleDateString("fr-FR", {
         year: "numeric",
         month: "long",
         day: "numeric",
@@ -76,30 +76,28 @@ export const Contact = () => {
     emailjs
       .send(serviceId, templateId, templateParams, publicKey)
       .then(() => {
-        // console.log("Email sent successfully!", response);
-        setSuccess("Message sent successfully! We'll get back to you soon.");
+        setSuccess(
+          "Message envoyé avec succès ! Nous vous répondrons bientôt."
+        );
         setForm({ name: "", email: "", subject: "", message: "" });
         setTimeout(() => setSuccess(""), 5000);
         setLoading(false);
       })
       .catch((error) => {
-        console.error("Error sending email:", error);
-        setError("Failed to send message. Please try again later.");
+        console.error("Erreur lors de l'envoi de l'email :", error);
+        setError("Échec de l'envoi du message. Veuillez réessayer plus tard.");
         setLoading(false);
       });
   };
 
   return (
-    <div className="min-h-screen mt-14 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
-      <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white mb-14">
+    <div className="min-h-screen mt-5 bg-gradient-to-brt from-slate-50 via-blue-50 to-slate-100">
+      <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 text-white mb-14">
         <div className="relative max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Get In Touch
-            </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-2xl mx-auto">
-              Have a question or want to work together? We'd love to hear from
-              you.
+              Vous avez une question ou souhaitez collaborer ? Nous serions
+              ravis d'avoir de vos nouvelles.
             </p>
           </div>
         </div>
@@ -112,12 +110,16 @@ export const Contact = () => {
             <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
               <Mail className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-xl font-bold text-slate-800 mb-2">Email Us</h3>
+            <h3 className="text-xl font-bold text-slate-800 mb-2">
+              Envoyez-nous un email
+            </h3>
             <p className="text-blue-600 font-semibold mb-1">
-              contact@youthtech.com
+              <a href="mailto:youthtech.contact@gmail.com">
+                youthtech.contact@gmail.com
+              </a>
             </p>
             <p className="text-slate-500 text-sm">
-              We'll respond within 24 hours
+              Nous vous répondrons dans les 24 heures.
             </p>
           </div>
 
@@ -126,21 +128,21 @@ export const Contact = () => {
               <Clock className="w-7 h-7 text-white" />
             </div>
             <h3 className="text-xl font-bold text-slate-800 mb-2">
-              Business Hours
+              Horaires d'ouverture
             </h3>
             <p className="text-blue-600 font-semibold mb-1">
-              Mon - Fri: 9AM - 6PM
+              Lun - Ven : 9h - 18h
             </p>
-            <p className="text-slate-500 text-sm">Weekend: Closed</p>
           </div>
 
           <div className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200 hover:border-blue-300 hover:-translate-y-1">
             <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
               <MapPin className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-xl font-bold text-slate-800 mb-2">Visit Us</h3>
-            <p className="text-blue-600 font-semibold mb-1">Agadir, Morocco</p>
-            <p className="text-slate-500 text-sm">Open during business hours</p>
+            <h3 className="text-xl font-bold text-slate-800 mb-2">
+              Venez nous rendre visite
+            </h3>
+            <p className="text-blue-600 font-semibold mb-1">Agadir, Maroc</p>
           </div>
         </div>
 
@@ -148,10 +150,11 @@ export const Contact = () => {
           <div className="lg:col-span-2 bg-white p-8 lg:p-10 rounded-3xl shadow-xl border border-slate-200">
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-slate-900 mb-3">
-                Send a Message
+                Envoyez un message
               </h2>
               <p className="text-slate-600">
-                Fill out the form below and we'll get back to you soon.
+                Remplissez le formulaire ci-dessous et nous vous répondrons
+                rapidement.
               </p>
             </div>
 
@@ -172,7 +175,7 @@ export const Contact = () => {
             <div className="space-y-6">
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
-                  Full Name
+                  Nom complet
                 </label>
                 <input
                   type="text"
@@ -180,13 +183,13 @@ export const Contact = () => {
                   value={form.name}
                   onChange={handleChange}
                   className="w-full border-2 border-slate-200 rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all"
-                  placeholder="John Doe"
+                  placeholder="Jean Dupont"
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
-                  Email Address
+                  Adresse e-mail
                 </label>
                 <input
                   type="email"
@@ -194,13 +197,13 @@ export const Contact = () => {
                   value={form.email}
                   onChange={handleChange}
                   className="w-full border-2 border-slate-200 rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all"
-                  placeholder="john@example.com"
+                  placeholder="jean@example.com"
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
-                  Subject
+                  Sujet
                 </label>
                 <input
                   type="text"
@@ -208,7 +211,7 @@ export const Contact = () => {
                   value={form.subject}
                   onChange={handleChange}
                   className="w-full border-2 border-slate-200 rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all"
-                  placeholder="How can we help you?"
+                  placeholder="Comment pouvons-nous vous aider ?"
                 />
               </div>
 
@@ -222,7 +225,7 @@ export const Contact = () => {
                   onChange={handleChange}
                   rows="5"
                   className="w-full border-2 border-slate-200 rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all resize-none"
-                  placeholder="Tell us about your project or inquiry..."
+                  placeholder="Parlez-nous de votre projet ou de votre demande..."
                 ></textarea>
               </div>
 
@@ -239,12 +242,12 @@ export const Contact = () => {
                 {loading ? (
                   <>
                     <Loader2 className="w-5 h-5 animate-spin" />
-                    Sending...
+                    Envoi…
                   </>
                 ) : (
                   <>
                     <Send className="w-5 h-5" />
-                    Send Message
+                    Envoyer le message
                   </>
                 )}
               </button>
@@ -260,7 +263,7 @@ export const Contact = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Agadir Location Map"
+              title="Localisation Agadir"
             ></iframe>
           </div>
         </div>
